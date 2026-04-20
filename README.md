@@ -1,5 +1,5 @@
 ### EX1 Creation of Employee, Weather dataset in WEKA Data Mining and Analysis Tool and perform Preprocessing
-### DATE: 
+### DATE: 20.04.2026
 ### AIM: 
   To Create Employee, Weather dataset in WEKA Data Mining and Analysis Tool and perform preprocessing
 ### PROCEDURE: 
@@ -10,40 +10,47 @@
 --------------
 Employee Data
 ---------------
-@relation employee
-@attribute name {x,y,z,a,b}
-@attribute id numeric
-@attribute salary {low,medium,high}
-@attribute exp numeric
-@attribute gender {male,female}
-@attribute phone numeric
+@relation employee-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+
+@attribute name string
+@attribute salary numeric
+@attribute experience string
+@attribute working_time numeric
+@attribute working_days numeric
+@attribute leaves_taken numeric
+
 @data
-x,101,low,2,male,250311
-y,102,high,3,female,251665
-z,103,medium,1,male,240238
-a,104,low,5,female,200200
-b,105,high,2,male,240240
+shravin,80000,2year,0,0,2
+rohitcj,300000,2year,0,0,2
+jana,750000,2year,0,0,2
+maddy,45826,2year,0,0,2
 
 --------------
 Weather Data
 ---------------
 @relation weather
-@attribute outlook {sunny,rainy,overcast}
-@attribute temparature numeric
-@attribute humidity numeric
-@attribute windy {true,false}
-@attribute play {yes,no}
+
+@attribute outlook {sunny, overcast, rainy}
+@attribute temperature {hot, mild, cool}
+@attribute humidity {high, normal}
+@attribute windy {TRUE, FALSE}
+@attribute play {yes, no}
+
 @data
-sunny,85.0,85.0,false,no
-overcast,80.0,90.0,true,no
-sunny,83.0,86.0,false,yes
-rainy,70.0,86.0,false,yes
-rainy,68.0,80.0,false,yes
-rainy,65.0,70.0,true,no
-overcast,64.0,65.0,false,yes
-sunny,72.0,95.0,true,no
-sunny,69.0,70.0,false,yes
-rainy,75.0,80.0,false,yes
+sunny,hot,high,FALSE,no
+sunny,hot,high,TRUE,no
+overcast,hot,high,FALSE,yes
+rainy,mild,high,FALSE,yes
+rainy,cool,normal,FALSE,yes
+rainy,cool,normal,TRUE,no
+overcast,cool,normal,TRUE,yes
+sunny,mild,high,FALSE,no
+sunny,cool,normal,FALSE,yes
+rainy,mild,normal,FALSE,yes
+sunny,mild,normal,TRUE,yes
+overcast,mild,high,TRUE,yes
+overcast,hot,normal,FALSE,yes
+rainy,mild,high,TRUE,no
 ```
 3) After that the file is saved with .arff file format.
 4) Minimize the arff file and then open Start -> Programs -> weka-3-4.
@@ -53,6 +60,8 @@ rainy,75.0,80.0,false,yes
 8) Click on edit button which shows employee table on weka.
 
 ### OUTPUT:
+
+
 
 
 
@@ -75,7 +84,8 @@ rainy,75.0,80.0,false,yes
 14) Click on the Edit button, it shows a new Weather Table on Weka.
 
 ### OUTPUT:
-
+![Uploading employee ss.png…]()
+![Uploading weather ss.png…]()
 ### 2) Remove -> Pre-Processing Technique:
 
 1) Start -> Programs -> Weka-3-4 -> Weka-3-4
@@ -91,7 +101,8 @@ rainy,75.0,80.0,false,yes
 11) Click on the Edit button, it shows a new Weather Table on Weka.
 
 ### OUTPUT:
-
+![Uploading employee ss.png…]()
+![Uploading weather ss.png…]()
 ### Normalize -> Pre-Processing Technique:
 
 1) Start -> Programs -> Weka-3-4 -> Weka-3-4
@@ -107,5 +118,7 @@ rainy,75.0,80.0,false,yes
 11) Click on the Edit button, it shows a new Weather Table with normalized values on Weka.
 
 ### OUTPUT:
+![Uploading employee ss.png…]()
+![Uploading weather ss.png…]()
 ### RESULT: 
   Thus the program for generating employee and weather datasets has been developed, and preprocessing has been accomplished successfully.
